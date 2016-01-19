@@ -3,7 +3,7 @@
  */
 'use strict';
 
-var mongoose = require('mongoose');
+var mongoose = require('bluebird').promisifyAll(require('mongoose'));
 
 var catSchema = new mongoose.Scheme({
   name: String,

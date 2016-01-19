@@ -8,10 +8,12 @@ var Cat = require('./cat.model');
 
 export function create(req, res){
   //res.json(req.body);
-  CatModel.create(req.body, function(err, cat){
-    if(err){
+  Cat.createAsync(req.body)
+    .then(function(cat){
+      res.status(200).json(cat);
+    })
+    .catch(function(err){
       return res.status(500);
-    }
-    res.status(200).json(cat);
-  });
+    });
+
 };
