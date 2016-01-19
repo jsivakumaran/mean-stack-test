@@ -5,7 +5,7 @@
 
 var mongoose = require('bluebird').promisifyAll(require('mongoose'));
 
-var catSchema = new mongoose.Scheme({
+var catSchema = new mongoose.Schema({
   name: String,
   age: Number,
   favoriteColor: String,
