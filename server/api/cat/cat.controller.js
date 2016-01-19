@@ -4,7 +4,7 @@
 
 
 var mongoose = require('mongoose');
-var CatModel = mongoose.model('Cat', {name: String, age: Number});
+var Cat = require('./cat.model');
 
 export function create(req, res){
   //res.json(req.body);
