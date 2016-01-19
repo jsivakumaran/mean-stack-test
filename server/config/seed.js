@@ -6,6 +6,12 @@
 'use strict';
 import Thing from '../api/thing/thing.model';
 import User from '../api/user/user.model';
+import Cat from '../api/cat/cat.model';
+
+Cat.find({}).removeAsync()
+  .then(() => {
+  Cat.create({name: 'Bob', age: 29, favoriteColor: 'blue'});
+});
 
 Thing.find({}).removeAsync()
   .then(() => {
